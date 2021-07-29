@@ -1,4 +1,14 @@
 .header
+ position: relative;
+ &::after
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 324px;
+  background: url(../img/header/clouds.png) center center/cover no-repeat;
+  top: 665px;
+  left: 0;
+  z-index: 1;
  &__container
   width: 100%;
  &__nav
@@ -41,7 +51,7 @@
   width: 100%;
   max-width: 693px;
   margin: 0 0 13px 0;
- &__text
+ &__subtitle
   font-weight: normal;
   font-size: 25px;
   line-height: 200%;
@@ -57,8 +67,54 @@
    left: 0;
    top: 15px;
    background: url(../img/header/icon-done.png) center center/cover no-repeat;
- &__btn
+ &__buttons
   margin: 75px 0 0 0;
+  display: grid;
+  grid-template-columns: minmax(311px, 456px) minmax(316px, 1fr)
+ &__video  
+  width: 100%;
+  max-width: 296px;
+  height: 81px;
+  position: relative;
+  z-index: 1;
+ &__filter
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #FFFFFF;
+  filter: blur(22px);
+  border-radius: 82px;
+  z-index: 0;
+ &__play
+  @include btnbase
+  width: 74px;
+  height: 74px;
+  border-radius: 100%;
+  filter: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  & img
+   width: 25px;
+   padding-left: 5px;
+ &__text
+  width: 176px;
+  padding: 15px 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+ &__read
+  font-size: 15px;
+  line-height: 110%;
+  color: $darkcolor;
+  margin: 0 0 1px 0;
+ &__readingtime
+  font-size: 13px;
+  color: #7e7d7d;
+
+  
   
 
   
